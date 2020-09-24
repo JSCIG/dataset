@@ -24,26 +24,40 @@ async function makeProposals() {
         // ignore not found
       }
     }
+    console.log("Added", proposal.name);
     items.push({
       stage: proposal.stage,
       name: proposal.name,
+
+      description: data?.description,
+
       link: proposal.link,
       meeting_link: proposal.meeting_link,
       test_link: proposal.test_link,
+
       authors: proposal.authors,
       champions: proposal.champions,
+
+      repo: data?.name,
+      owner: data?.organization?.login ?? data?.owner?.login,
+
       archived: data?.archived,
+
       forks_count: data?.forks_count,
-      network_count: data?.network_count,
       open_issues_count: data?.open_issues_count,
       stargazers_count: data?.stargazers_count,
       subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
+
       published_at: data?.created_at,
       pushed_at: data?.pushed_at,
       updated_at: data?.updated_at,
     });
   }
+  items.sort(
+    (a, b) =>
+      new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+  );
   return items;
 }
 
