@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 PATH="$(npm bin):$PATH"
 set -x
 mkdir dist
