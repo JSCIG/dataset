@@ -560,7 +560,7 @@
   {
     "stage": 2,
     "name": "Class Static Block",
-    "link": "https://github.com/tc39/proposal-class-static-block#readme",
+    "link": "https://github.com/tc39/proposal-class-static-block",
     "authors": ["Ron Buckton"],
     "champions": ["Ron Buckton"]
   },
