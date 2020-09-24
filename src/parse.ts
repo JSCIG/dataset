@@ -30,8 +30,8 @@ async function readProposals(tags: string[], stages: number[], path: string) {
         stage: stages[i],
         name: row['Proposal']?.texts.join(''),
         link: _.values(row['Proposal']?.links)[0],
-        authors: row['Author']?.texts,
-        champions: (row['Champion'] ?? row['Champion(s)'])?.texts,
+        authors: splitPeopleNames(row['Author']?.texts) ?? [],
+        champions: splitPeopleNames((row['Champion'] ?? row['Champion(s)'])?.texts) ?? [],
         meeting: _.values((row['TC39 meeting notes'] ?? row['Last Presented'])?.links)[0],
         tests: _.values(row['Tests']?.links)[0],
       });
@@ -39,4 +39,15 @@ async function readProposals(tags: string[], stages: number[], path: string) {
     i++;
   }
   return records;
+}
+
+function splitPeopleNames(texts: string[] | undefined) {
+  return texts
+    ?.flatMap((text) => {
+      if (text.includes('previously')) {
+        return text;
+      }
+      return text.split(/,\s+|\s+&\s+|\s+and\s+/g);
+    })
+    .map((text) => text.trim());
 }
