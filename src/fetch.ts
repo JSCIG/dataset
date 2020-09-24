@@ -1,7 +1,8 @@
-import { Octokit } from "@octokit/rest";
-import { ReposGetResponseData } from "@octokit/types";
-import { promises as fs } from "fs";
-import proposals from "./proposals.json";
+import { Octokit } from '@octokit/rest';
+import { ReposGetResponseData } from '@octokit/types';
+import { promises as fs } from 'fs';
+import parseGithubURL from 'parse-github-url';
+import { readAllProposals } from './parse';
 
 const github = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -9,22 +10,21 @@ const github = new Octokit({
 
 async function makeProposals() {
   const items: any[] = [];
-  for (const proposal of proposals) {
+  for (const proposal of await readAllProposals()) {
     let data: ReposGetResponseData | undefined;
-    if (proposal.link && proposal.link.startsWith("https://github.com/")) {
-      const link = proposal.link.replace("https://github.com/", "");
-      const index = link.indexOf("/");
-      const end = link.indexOf("/", index + 1);
-      const owner = link.slice(0, index);
-      const repo = link.slice(index + 1, end !== -1 ? end : undefined);
+    if (proposal.link && proposal.link.includes('github.com')) {
+      const result = parseGithubURL(proposal.link)!;
       try {
-        const response = await github.repos.get({ owner, repo });
+        const response = await github.repos.get({
+          owner: result.owner!,
+          repo: result.name!,
+        });
         data = response.data;
       } catch {
         // ignore not found
       }
     }
-    console.log("Added", proposal.name);
+    console.log('Added', proposal.name);
     items.push({
       stage: proposal.stage,
       name: proposal.name,
@@ -32,8 +32,8 @@ async function makeProposals() {
       description: data?.description,
 
       link: proposal.link,
-      meeting_link: proposal.meeting_link,
-      test_link: proposal.test_link,
+      meeting: proposal.meeting,
+      tests: proposal.tests,
 
       authors: proposal.authors,
       champions: proposal.champions,
@@ -54,17 +54,17 @@ async function makeProposals() {
       updated_at: data?.updated_at,
     });
   }
-  items.sort(
-    (a, b) =>
-      new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
-  );
+  items.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
   return items;
 }
 
 async function main() {
   const proposals = await makeProposals();
-  await fs.writeFile("proposals.json", JSON.stringify(proposals, null, 2));
-  await fs.writeFile("proposals.min.json", JSON.stringify(proposals));
+  await fs.writeFile('dist/proposals.json', JSON.stringify(proposals, null, 2));
+  await fs.writeFile('dist/proposals.min.json', JSON.stringify(proposals));
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

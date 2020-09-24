@@ -13,13 +13,17 @@ jobs:
     continue-on-error: false
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: tc39/proposals
+          path: proposals
       - uses: actions/setup-node@v2-beta
         with:
           node-version: 14.x
       - name: Install
         run: npm ci
       - name: Make dataset
-        run: scripts/follow.sh
+        run: npx ts-node src/fetch.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy
