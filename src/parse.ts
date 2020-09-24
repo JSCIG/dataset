@@ -28,12 +28,13 @@ async function readProposals(tags: string[], stages: number[], path: string) {
       records.push({
         tags,
         stage: stages[i],
-        name: row['Proposal']?.texts.join(''),
+        name: row['Proposal']?.texts.join('') ?? '[Unknown]',
         link: _.values(row['Proposal']?.links)[0],
-        authors: splitPeopleNames(row['Author']?.texts) ?? [],
-        champions: splitPeopleNames((row['Champion'] ?? row['Champion(s)'])?.texts) ?? [],
+        authors: splitPeopleNames(row['Author']?.texts),
+        champions: splitPeopleNames((row['Champion'] ?? row['Champion(s)'])?.texts),
         meeting: _.values((row['TC39 meeting notes'] ?? row['Last Presented'])?.links)[0],
         tests: _.values(row['Tests']?.links)[0],
+        rationale: row['Rationale']?.texts?.join(''),
       });
     }
     i++;

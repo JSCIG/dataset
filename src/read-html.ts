@@ -39,7 +39,7 @@ export function parseHTML(input: string) {
         .toArray()
         .map(buildRow)
         .filter((records) => records.length)
-        .map((records): Record<string, Field> => Object.fromEntries(records.map((record, i) => [headers[i], record])));
+        .map((records): Record<string, Field | undefined> => Object.fromEntries(records.map((record, i) => [headers[i], record])));
     });
 }
 

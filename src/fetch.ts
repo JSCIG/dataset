@@ -30,8 +30,9 @@ async function makeProposals() {
       name: proposal.name,
 
       description: data?.description,
+      rationale: proposal.rationale,
 
-      link: proposal.link,
+      link: data?.html_url ?? proposal.link,
       meeting: proposal.meeting,
       tests: proposal.tests,
 
