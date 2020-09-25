@@ -44,12 +44,14 @@ async function readProposals(tags: string[], stages: number[], path: string) {
 }
 
 function splitPeopleNames(texts: string[] | undefined) {
-  return texts
+  texts = texts
     ?.flatMap((text) => {
       if (text.includes('previously')) {
         return text;
       }
       return text.split(/,\s+|\s+&\s+|\s+and\s+/g);
     })
-    .map((text) => text.trim());
+    .map((text) => text.trim())
+    .filter((text) => text.length);
+  return texts?.length ? texts : undefined;
 }
