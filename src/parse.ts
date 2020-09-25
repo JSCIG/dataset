@@ -7,52 +7,87 @@ import { ProposalRecord } from './types';
 const markdown = new MarkdownIt();
 
 export async function readAllProposals() {
-  return _.concat(
-    await readProposals(['ECMA-262', 'finished'], [4], 'proposals/finished-proposals.md'),
-    await readProposals(['ECMA-262', 'stage'], [3, 2], 'proposals/README.md'),
-    await readProposals(['ECMA-262', 'stage'], [1], 'proposals/stage-1-proposals.md'),
-    await readProposals(['ECMA-262', 'stage'], [0], 'proposals/stage-0-proposals.md'),
-    await readProposals(['ECMA-262', 'inactive'], [-1], 'proposals/inactive-proposals.md'),
-    await readProposals(['ECMA-402', 'finished'], [4], 'proposals/ecma402/finished-proposals.md'),
-    await readProposals(['ECMA-402', 'stage'], [3, 2, 1], 'proposals/ecma402/README.md'),
-    await readProposals(['ECMA-402', 'stage'], [0], 'proposals/ecma402/stage-0-proposals.md'),
-  );
-}
-
-async function readProposals(tags: string[], stages: number[], path: string) {
+  interface Job {
+    tags: string[];
+    stages: number[];
+    path: string;
+  }
+  const jobs: Job[] = [
+    // ECMA-262
+    { tags: ['ECMA-262', 'finished'], stages: [4], path: 'finished-proposals' },
+    { tags: ['ECMA-262', 'stage'], stages: [3, 2], path: 'README' },
+    { tags: ['ECMA-262', 'stage'], stages: [1], path: 'stage-1-proposals' },
+    { tags: ['ECMA-262', 'stage'], stages: [0], path: 'stage-0-proposals' },
+    { tags: ['ECMA-262', 'inactive'], stages: [-1], path: 'inactive-proposals' },
+    // ECMA-402
+    { tags: ['ECMA-402', 'finished'], stages: [4], path: 'ecma402/finished-proposals' },
+    { tags: ['ECMA-402', 'stage'], stages: [3, 2, 1], path: 'ecma402/README' },
+    { tags: ['ECMA-402', 'stage'], stages: [0], path: 'ecma402/stage-0-proposals' },
+  ];
   const records: ProposalRecord[] = [];
-  const content = await fs.readFile(path, 'utf-8');
-  const parsed = parseHTML(markdown.render(content));
-  let i = 0;
-  for (const table of parsed) {
-    for (const row of table) {
-      records.push({
-        tags,
-        stage: stages[i],
-        name: row['Proposal']?.texts.join('') ?? '[Unknown]',
-        link: _.values(row['Proposal']?.links)[0],
-        authors: splitPeopleNames(row['Author']?.texts),
-        champions: splitPeopleNames((row['Champion'] ?? row['Champion(s)'])?.texts),
-        meeting: _.values((row['TC39 meeting notes'] ?? row['Last Presented'])?.links)[0],
-        tests: _.values(row['Tests']?.links)[0],
-        rationale: row['Rationale']?.texts?.join(''),
-        edition: row['Expected Publication Year']?.texts.join(''),
-      });
-    }
-    i++;
+  for (const { tags, stages, path } of jobs) {
+    records.push(...readProposals(tags, stages, await fs.readFile(`proposals/${path}.md`, 'utf-8')));
   }
   return records;
 }
 
-function splitPeopleNames(texts: string[] | undefined) {
-  texts = texts
-    ?.flatMap((text) => {
+function* readProposals(tags: string[], stages: number[], content: string): Generator<ProposalRecord> {
+  let i = 0;
+  for (const table of parseHTML(markdown.render(content), renameHeader)) {
+    console.log(`Parsing ${tags[0]} Stage ${stages[i]}`);
+    for (const row of table) {
+      yield {
+        tags,
+        stage: stages[i],
+        name: row.name?.text,
+        link: _.values(row.name?.links)[0],
+        authors: splitPeopleNames(row.author?.text),
+        champions: splitPeopleNames(row.champion?.text),
+        meeting: _.values(row.meeting?.links)[0],
+        tests: _.values(row.tests?.links)[0],
+        rationale: row.rationale?.text,
+        edition: row.edition ? +row.edition.text : undefined,
+      };
+    }
+    i++;
+  }
+}
+
+function renameHeader(name: string): string {
+  if (/proposal/i.test(name)) {
+    return 'name';
+  } else if (/author/i.test(name)) {
+    return 'author';
+  } else if (/champion/i.test(name)) {
+    return 'champion';
+  } else if (/meeting|presented/i.test(name)) {
+    return 'meeting';
+  } else if (/tests/i.test(name)) {
+    return 'tests';
+  } else if (/rationale/i.test(name)) {
+    return 'rationale';
+  } else if (/publication/i.test(name)) {
+    return 'edition';
+  }
+  return name;
+}
+
+function splitPeopleNames(text: string | undefined) {
+  if (_.isNil(text)) {
+    return;
+  }
+  const texts = text
+    .split(/<br\s*\/>/gi)
+    .flatMap((text) => {
       if (text.includes('previously')) {
         return text;
       }
-      return text.split(/,\s+|\s+&\s+|\s+and\s+/g);
+      return text.split(/,\s+|\s+(?:&|and)\s+/g);
     })
     .map((text) => text.trim())
     .filter((text) => text.length);
-  return texts?.length ? texts : undefined;
+  if (texts.length === 0) {
+    return;
+  }
+  return texts;
 }

@@ -1,49 +1,39 @@
 import cheerio from 'cheerio';
+import _ from 'lodash';
 
-export function parseHTML(input: string) {
+export function* parseHTML(input: string, renameHeader: (name: string) => string = _.identity) {
   const $ = cheerio.load(input);
 
-  function buildHeaders(element: cheerio.Element) {
-    return $('tr th', element)
-      .toArray()
-      .map((cell) => $(cell).text().trim());
-  }
-
-  function buildRow(row: cheerio.Element, index: number) {
-    if (index === 0) {
-      return [];
+  function* buildHeaders(element: cheerio.Element) {
+    for (const cell of $('tr th', element).toArray()) {
+      yield renameHeader($(cell).text().trim());
     }
-    return $('td', row)
-      .toArray()
-      .map(
-        (cell): Field => ({
-          texts: $(cell)
-            .text()
-            .trim()
-            .split(/<br \/>/g)
-            .map((item) => item.trim()),
-          links: Object.fromEntries(
-            $('a', cell)
-              .toArray()
-              .map((element) => [$(element).text().trim(), element.attribs.href]),
-          ),
-        }),
-      );
   }
 
-  return $('table')
-    .toArray()
-    .map((element) => {
-      const headers = buildHeaders(element);
-      return $('tr', element)
-        .toArray()
-        .map(buildRow)
-        .filter((records) => records.length)
-        .map((records): Record<string, Field | undefined> => Object.fromEntries(records.map((record, i) => [headers[i], record])));
-    });
+  function* buildRow(row: cheerio.Element): Generator<Field> {
+    for (const cell of $('td', row).toArray()) {
+      const text = $(cell).text().trim();
+      const links = _.chain($('a', cell).toArray())
+        .map((element) => [$(element).text().trim(), element.attribs.href.trim()])
+        .fromPairs()
+        .value();
+      yield { text, links };
+    }
+  }
+
+  function* buildRows(headers: string[], rows: cheerio.Element[]): Generator<Record<string, Field | undefined>> {
+    for (let index = 1; index < rows.length; index++) {
+      const fields = Array.from(buildRow(rows[index]));
+      yield _.fromPairs(fields.map((value, i) => [headers[i], value]));
+    }
+  }
+
+  for (const element of $('table').toArray()) {
+    yield buildRows(Array.from(buildHeaders(element)), $('tr', element).toArray());
+  }
 }
 
 interface Field {
-  texts: string[];
-  links: Record<string | number, string>;
+  text: string;
+  links: Record<string, string>;
 }

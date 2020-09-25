@@ -1,21 +1,21 @@
 export interface ProposalRecord {
   tags: string[];
   stage?: number;
-  name: string;
+  name?: string;
   link?: string;
   authors?: string[];
   champions?: string[];
   meeting?: string;
   tests?: string;
   rationale?: string;
-  edition?: string;
+  edition?: number;
 }
 
 export interface ExportedProposalRecord {
   tags: string[];
 
   stage?: number;
-  name: string;
+  name?: string;
 
   description?: string;
   rationale?: string;
