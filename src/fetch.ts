@@ -52,7 +52,18 @@ async function makeProposals() {
       }
     }
     console.log('Added', proposal.name);
+    const tags = proposal.tags;
+
+    if (data?.archived) {
+      tags.push('archived');
+    }
+    if (proposal.stage === -1) {
+      tags.push('inactive');
+    }
+
     items.push({
+      tags,
+
       stage: proposal.stage,
       name: proposal.name,
 
@@ -68,8 +79,6 @@ async function makeProposals() {
 
       repo: data?.name,
       owner: data?.organization?.login ?? data?.owner?.login,
-
-      archived: data?.archived,
 
       forks_count: data?.forks_count,
       open_issues_count: data?.open_issues_count,
