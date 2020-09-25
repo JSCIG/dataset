@@ -92,7 +92,7 @@ async function makeProposals() {
       edition: proposal.edition ? +proposal.edition : undefined,
 
       authors: proposal.authors,
-      champions: proposal.champions,
+      champions: _.isEqual(proposal.authors, proposal.champions) ? undefined : proposal.champions,
 
       forks_count: data?.forks_count,
       open_issues_count: data?.open_issues_count,
