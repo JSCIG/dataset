@@ -57,8 +57,8 @@ async function makeProposals() {
     if (data?.archived) {
       tags.push('archived');
     }
-    if (proposal.stage === -1) {
-      tags.push('inactive');
+    if (data?.organization?.login === 'tc39') {
+      tags.push('transferred');
     }
 
     items.push({
@@ -76,9 +76,6 @@ async function makeProposals() {
 
       authors: proposal.authors,
       champions: proposal.champions,
-
-      repo: data?.name,
-      owner: data?.organization?.login ?? data?.owner?.login,
 
       forks_count: data?.forks_count,
       open_issues_count: data?.open_issues_count,

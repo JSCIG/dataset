@@ -1,6 +1,6 @@
 export interface ProposalRecord {
   tags: string[];
-  stage: number;
+  stage?: number;
   name: string;
   link: string;
   authors?: string[];
