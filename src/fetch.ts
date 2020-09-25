@@ -100,13 +100,12 @@ async function makeProposals() {
       subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
 
-      published_at: data?.created_at,
+      created_at: data?.created_at,
       pushed_at: data?.pushed_at,
-      updated_at: data?.updated_at,
     });
   }
   return _.chain(records)
-    .sortBy((record) => (record.published_at ? new Date(record.published_at) : record.stage))
+    .sortBy((record) => (record.created_at ? new Date(record.created_at) : record.stage))
     .reverse()
     .value();
 }
