@@ -29,7 +29,7 @@ async function makeProposals() {
       stage: proposal.stage,
       name: proposal.name,
 
-      description: data?.description,
+      description: data?.description ?? undefined,
       rationale: proposal.rationale,
 
       link: data?.html_url ?? proposal.link,
