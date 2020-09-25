@@ -52,7 +52,7 @@ async function makeProposals() {
       }
     }
     console.log('Added', proposal.name);
-    const tags = proposal.tags;
+    const tags = Array.from(proposal.tags);
 
     if (data?.archived) {
       tags.push('archived');
