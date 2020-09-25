@@ -12,7 +12,7 @@ export async function readAllProposals() {
     await readProposals(['ECMA-262', 'stage'], [3, 2], 'proposals/README.md'),
     await readProposals(['ECMA-262', 'stage'], [1], 'proposals/stage-1-proposals.md'),
     await readProposals(['ECMA-262', 'stage'], [0], 'proposals/stage-0-proposals.md'),
-    await readProposals(['ECMA-262', 'inactive'], [], 'proposals/inactive-proposals.md'),
+    await readProposals(['ECMA-262', 'inactive'], [-1], 'proposals/inactive-proposals.md'),
     await readProposals(['ECMA-402', 'finished'], [4], 'proposals/ecma402/finished-proposals.md'),
     await readProposals(['ECMA-402', 'stage'], [3, 2, 1], 'proposals/ecma402/README.md'),
     await readProposals(['ECMA-402', 'stage'], [0], 'proposals/ecma402/stage-0-proposals.md'),

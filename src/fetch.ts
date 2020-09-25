@@ -1,9 +1,10 @@
 import { Octokit } from '@octokit/rest';
-import { ReposGetResponseData } from '@octokit/types';
+import { ReposGetResponseData, ReposListForOrgResponseData } from '@octokit/types';
 import { promises as fs } from 'fs';
-import parseGithubURL from 'parse-github-url';
-import { readAllProposals } from './parse';
 import _ from 'lodash';
+import parseGithubURL from 'parse-github-url';
+import { makeECMAMembers } from './ecma';
+import { readAllProposals } from './parse';
 
 const github = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -35,32 +36,46 @@ async function makeMembers(org: string) {
   return members;
 }
 
+async function getTC39Repos() {
+  let repos: ReposListForOrgResponseData = [];
+  let page = 0;
+  while (true) {
+    const { data } = await github.repos.listForOrg({ org: 'tc39', per_page: 100, page });
+    repos.push(...data);
+    if (data.length < 100) {
+      break;
+    }
+    page++;
+  }
+  return repos;
+}
+
 async function makeProposals() {
+  const repos = await getTC39Repos();
   const items: any[] = [];
   for (const proposal of await readAllProposals()) {
-    let data: ReposGetResponseData | undefined;
+    const tags = Array.from(proposal.tags);
+    let data: ReposGetResponseData | ReposListForOrgResponseData[number] | undefined;
     if (proposal.link?.includes('github.com')) {
       const result = parseGithubURL(proposal.link)!;
-      try {
-        const response = await github.repos.get({
-          owner: result.owner!,
-          repo: result.name!,
-        });
-        data = response.data;
-      } catch {
-        // ignore not found
+      data = repos.find(({ owner, name }) => owner.login === result.owner && name === result.name);
+      if (_.isNil(data)) {
+        try {
+          const response = await github.repos.get({
+            owner: result.owner!,
+            repo: result.name!,
+          });
+          data = response.data;
+        } catch (error) {
+          console.error('[Skip]', JSON.stringify(proposal.name), error);
+          continue;
+        }
       }
     }
     console.log('Added', proposal.name);
-    const tags = Array.from(proposal.tags);
-
     if (data?.archived) {
       tags.push('archived');
     }
-    if (data?.organization?.login === 'tc39') {
-      tags.push('transferred');
-    }
-
     items.push({
       tags,
 
@@ -70,7 +85,7 @@ async function makeProposals() {
       description: data?.description ?? undefined,
       rationale: proposal.rationale,
 
-      link: /\/blob\/.+\.md$/.test(proposal.link) ? proposal.link : data?.html_url ?? proposal.link,
+      link: proposal.link?.includes('/blob/master/') ? proposal.link : data?.html_url ?? proposal.link,
       meeting: proposal.meeting,
       tests: proposal.tests,
 
@@ -93,6 +108,10 @@ async function makeProposals() {
 }
 
 async function main() {
+  console.log('Fetch ECMA Members');
+  const ecmaMembers = await makeECMAMembers();
+  await fs.writeFile('dist/members-ecma.json', JSON.stringify(ecmaMembers, null, 2));
+
   console.log('Fetch TC39 Members');
   const tc39Members = await makeMembers('tc39');
   await fs.writeFile('dist/members-tc39.json', JSON.stringify(tc39Members, null, 2));
