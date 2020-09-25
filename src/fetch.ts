@@ -5,6 +5,7 @@ import _ from 'lodash';
 import parseGithubURL from 'parse-github-url';
 import { makeECMAMembers } from './ecma';
 import { readAllProposals } from './parse';
+import { ExportedProposalRecord } from './types';
 
 const github = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -52,7 +53,7 @@ async function getTC39Repos() {
 
 async function makeProposals() {
   const repos = await getTC39Repos();
-  const items: any[] = [];
+  const records: ExportedProposalRecord[] = [];
   for (const proposal of await readAllProposals()) {
     const tags = Array.from(proposal.tags);
     let data: ReposGetResponseData | ReposListForOrgResponseData[number] | undefined;
@@ -76,7 +77,7 @@ async function makeProposals() {
     if (data?.archived) {
       tags.push('archived');
     }
-    items.push({
+    records.push({
       tags,
 
       stage: proposal.stage,
@@ -88,6 +89,7 @@ async function makeProposals() {
       link: proposal.link?.includes('/blob/master/') ? proposal.link : data?.html_url ?? proposal.link,
       meeting: proposal.meeting,
       tests: proposal.tests,
+      edition: proposal.edition ? +proposal.edition : undefined,
 
       authors: proposal.authors,
       champions: proposal.champions,
@@ -103,8 +105,10 @@ async function makeProposals() {
       updated_at: data?.updated_at,
     });
   }
-  items.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
-  return items;
+  return _.chain(records)
+    .sortBy((record) => (record.published_at ? new Date(record.published_at) : record.stage))
+    .reverse()
+    .value();
 }
 
 async function main() {

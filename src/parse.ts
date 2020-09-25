@@ -36,6 +36,7 @@ async function readProposals(tags: string[], stages: number[], path: string) {
         meeting: _.values((row['TC39 meeting notes'] ?? row['Last Presented'])?.links)[0],
         tests: _.values(row['Tests']?.links)[0],
         rationale: row['Rationale']?.texts?.join(''),
+        edition: row['Expected Publication Year']?.texts.join(''),
       });
     }
     i++;
