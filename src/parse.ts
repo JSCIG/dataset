@@ -14,15 +14,15 @@ export async function readAllProposals() {
   }
   const jobs: Job[] = [
     // ECMA-262
-    { tags: ['ECMA-262', 'finished'], stages: [4], path: 'finished-proposals' },
-    { tags: ['ECMA-262', 'stage'], stages: [3, 2], path: 'README' },
-    { tags: ['ECMA-262', 'stage'], stages: [1], path: 'stage-1-proposals' },
-    { tags: ['ECMA-262', 'stage'], stages: [0], path: 'stage-0-proposals' },
-    { tags: ['ECMA-262', 'inactive'], stages: [-1], path: 'inactive-proposals' },
+    { tags: ['ECMA-262'], stages: [4], path: 'finished-proposals' },
+    { tags: ['ECMA-262'], stages: [3, 2], path: 'README' },
+    { tags: ['ECMA-262'], stages: [1], path: 'stage-1-proposals' },
+    { tags: ['ECMA-262'], stages: [0], path: 'stage-0-proposals' },
+    { tags: ['ECMA-262'], stages: [-1], path: 'inactive-proposals' },
     // ECMA-402
-    { tags: ['ECMA-402', 'finished'], stages: [4], path: 'ecma402/finished-proposals' },
-    { tags: ['ECMA-402', 'stage'], stages: [3, 2, 1], path: 'ecma402/README' },
-    { tags: ['ECMA-402', 'stage'], stages: [0], path: 'ecma402/stage-0-proposals' },
+    { tags: ['ECMA-402'], stages: [4], path: 'ecma402/finished-proposals' },
+    { tags: ['ECMA-402'], stages: [3, 2, 1], path: 'ecma402/README' },
+    { tags: ['ECMA-402'], stages: [0], path: 'ecma402/stage-0-proposals' },
   ];
   const records: ProposalRecord[] = [];
   for (const { tags, stages, path } of jobs) {

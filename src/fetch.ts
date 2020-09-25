@@ -55,7 +55,6 @@ async function makeProposals() {
   const repos = await getTC39Repos();
   const records: ExportedProposalRecord[] = [];
   for (const proposal of await readAllProposals()) {
-    const tags = Array.from(proposal.tags);
     let data: ReposGetResponseData | ReposListForOrgResponseData[number] | undefined;
     if (proposal.link?.includes('github.com')) {
       const result = parseGithubURL(proposal.link)!;
@@ -68,17 +67,23 @@ async function makeProposals() {
           });
           data = response.data;
         } catch (error) {
-          console.error('[Skip]', JSON.stringify(proposal.name), error);
+          console.error(`[Skip] \`${proposal.name}\``, error);
           continue;
         }
       }
     }
-    console.log('Added', proposal.name);
-    if (data?.archived) {
-      tags.push('archived');
-    }
+    console.log(`Added \`${proposal.name}\``);
     records.push({
-      tags,
+      tags: makeTags(proposal.tags, {
+        'inactive': proposal.stage === -1,
+        'strawperson': proposal.stage === 0,
+        'proposal': proposal.stage === 1,
+        'draft': proposal.stage === 2,
+        'candidate': proposal.stage === 3,
+        'finished': proposal.stage === 4,
+        'archived': data?.archived || proposal.link?.includes('archive.org'),
+        'co-champion': _.isEqual(proposal.authors, proposal.champions),
+      }),
 
       stage: proposal.stage,
       name: proposal.name,
@@ -108,6 +113,10 @@ async function makeProposals() {
     .sortBy((record) => (record.created_at ? new Date(record.created_at) : record.stage))
     .reverse()
     .value();
+}
+
+function makeTags(tags: string[], flags: Record<string, boolean | undefined>) {
+  return _.concat(tags, _.keys(_.pickBy(flags, (value) => value === true)));
 }
 
 async function main() {
