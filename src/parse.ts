@@ -9,7 +9,7 @@ const markdown = new MarkdownIt();
 export async function readAllProposals() {
   return _.concat(
     await readProposals(['ECMA-262'], [4], 'proposals/finished-proposals.md'),
-    await readProposals(['ECMA-262'], [2, 3], 'proposals/README.md'),
+    await readProposals(['ECMA-262'], [3, 2], 'proposals/README.md'),
     await readProposals(['ECMA-262'], [1], 'proposals/stage-1-proposals.md'),
     await readProposals(['ECMA-262'], [0], 'proposals/stage-0-proposals.md'),
     await readProposals(['ECMA-262'], [-1], 'proposals/inactive-proposals.md'),
