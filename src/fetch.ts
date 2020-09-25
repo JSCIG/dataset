@@ -59,7 +59,7 @@ async function makeProposals() {
       description: data?.description ?? undefined,
       rationale: proposal.rationale,
 
-      link: data?.html_url ?? proposal.link,
+      link: /\/blob\/.+\.md$/.test(proposal.link) ? proposal.link : data?.html_url ?? proposal.link,
       meeting: proposal.meeting,
       tests: proposal.tests,
 
