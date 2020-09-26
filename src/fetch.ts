@@ -110,7 +110,10 @@ async function getProposals() {
     });
   }
   return _.chain(records)
-    .sortBy(({ created_at, stage }) => (created_at ? new Date(created_at) : stage))
+    .sortBy(({ created_at, meeting_at, stage }) => {
+      const at = created_at ?? meeting_at;
+      return at ? new Date(at) : stage;
+    })
     .reverse()
     .value();
 }
