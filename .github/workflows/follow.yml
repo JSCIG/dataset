@@ -26,6 +26,8 @@ jobs:
         run: npx ts-node src/fetch.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Prettier JSON
+        run: npx prettier -w dist/proposals.json dist/members-*.json
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
