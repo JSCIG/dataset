@@ -41,7 +41,7 @@ export interface ExportedProposalRecord {
 
 export interface ECMAMember {
   category: string;
-  href: string;
-  logo: string;
   name: string;
+  logo: string;
+  href: string;
 }
