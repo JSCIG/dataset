@@ -77,7 +77,7 @@ function splitPeopleNames(text: string | undefined) {
     return;
   }
   const texts = text
-    .split(/<br\s*\/>/gi)
+    .split(/<br\s*\/?>/gi)
     .flatMap((text) => {
       if (text.includes('previously')) {
         return text;

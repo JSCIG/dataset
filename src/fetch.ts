@@ -65,13 +65,13 @@ async function getProposals() {
             repo: result.name!,
           });
           data = response.data;
-          if (data.owner.login !== result.owner || data.name !== result.name) {
-            console.error('[Transferred]', proposal.link, '->', response.data.html_url);
-          }
         } catch (error) {
           console.error(`[Skip] \`${proposal.name}\``, error);
           continue;
         }
+      }
+      if (data.owner.login !== result.owner || data.name !== result.name) {
+        console.error('[Transferred]', proposal.link, '->', data.html_url);
       }
     }
     console.log(`Added \`${proposal.name}\``);
