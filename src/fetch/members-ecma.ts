@@ -34,7 +34,7 @@ function normalizeURL(link: string) {
   return url.format(parsed);
 }
 
-export async function makeECMAMembers() {
+export async function getECMAMembers() {
   const members: ECMAMember[] = [];
   const categories = ['associat', 'ordinary', 'sme', 'spc', 'nfp'];
   for (const category of categories) {

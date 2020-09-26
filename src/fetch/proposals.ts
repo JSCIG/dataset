@@ -1,56 +1,12 @@
-import { Octokit } from '@octokit/rest';
 import { ReposGetResponseData, ReposListForOrgResponseData } from '@octokit/types';
-import { promises as fs } from 'fs';
 import _ from 'lodash';
 import parseGithubURL from 'parse-github-url';
-import { makeECMAMembers } from './ecma';
-import { readAllProposals } from './parse';
+import { github } from './github';
+import { readAllProposals } from './proposal-markdown';
+import { getTC39Repos } from './repos';
 import { ExportedProposalRecord } from './types';
 
-const github = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
-
-async function getMembers(org: string) {
-  let members: any[] = [];
-  let page = 0;
-  while (true) {
-    const { data } = await github.orgs.listMembers({ org, per_page: 100, page });
-    for (const member of data) {
-      const { data: user } = await github.users.getByUsername({ username: member.login });
-      members.push({
-        name: user.name?.trim() ?? user.login,
-        username: user.login,
-        url: user.html_url,
-        avatar_url: user.avatar_url,
-        company: user.company?.trim() ?? undefined,
-        location: user.location?.trim() ?? undefined,
-        bio: user.bio?.trim() ?? undefined,
-      });
-    }
-    if (data.length < 100) {
-      break;
-    }
-    page++;
-  }
-  return members;
-}
-
-async function getTC39Repos() {
-  let repos: ReposListForOrgResponseData = [];
-  let page = 0;
-  while (true) {
-    const { data } = await github.repos.listForOrg({ org: 'tc39', per_page: 100, page });
-    repos.push(...data);
-    if (data.length < 100) {
-      break;
-    }
-    page++;
-  }
-  return repos;
-}
-
-async function getProposals() {
+export async function getProposals() {
   const repos = await getTC39Repos();
   const records: ExportedProposalRecord[] = [];
   for (const proposal of await readAllProposals()) {
@@ -124,45 +80,6 @@ function getMeetingAt(meeting?: string) {
   return;
 }
 
-async function getRateLimit() {
-  const { data } = await github.rateLimit.get();
-  return {
-    limit: data.rate.limit,
-    remaining: data.rate.remaining,
-    reset: new Date(data.rate.reset * 1000).toISOString(),
-  };
-}
-
 function makeTags(tags: string[], flags: Record<string, boolean | undefined>) {
   return _.concat(tags, _.keys(_.pickBy(flags, (value) => value === true)));
 }
-
-async function main() {
-  console.log('Rate limit');
-  console.log(await getRateLimit());
-
-  console.log('Fetch ECMA Members');
-  const ecmaMembers = await makeECMAMembers();
-  await fs.writeFile('dist/members-ecma.json', JSON.stringify(ecmaMembers, null, 2));
-
-  console.log('Fetch TC39 Members');
-  const tc39Members = await getMembers('tc39');
-  await fs.writeFile('dist/members-tc39.json', JSON.stringify(tc39Members, null, 2));
-
-  console.log('Fetch JSCIG Members');
-  const jscigMembers = await getMembers('JSCIG');
-  await fs.writeFile('dist/members-jscig.json', JSON.stringify(jscigMembers, null, 2));
-
-  console.log('Fetch TC39 Proposals');
-  const proposals = await getProposals();
-  await fs.writeFile('dist/proposals.json', JSON.stringify(proposals, null, 2));
-  await fs.writeFile('dist/proposals.min.json', JSON.stringify(proposals));
-
-  console.log('Rate limit');
-  console.log(await getRateLimit());
-}
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});

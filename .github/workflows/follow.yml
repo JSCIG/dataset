@@ -22,7 +22,7 @@ jobs:
       - name: Install
         run: npm ci
       - name: Make dataset
-        run: npx ts-node src/fetch.ts
+        run: npx ts-node src/index.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Prettier JSON

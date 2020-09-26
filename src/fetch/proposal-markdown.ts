@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import _ from 'lodash';
 import MarkdownIt from 'markdown-it';
-import { parseHTML } from './read-html';
+import { parseHTML } from './parse-table';
 import { ProposalRecord } from './types';
 
 const markdown = new MarkdownIt();
