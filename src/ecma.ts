@@ -13,10 +13,11 @@ async function fetchMembers(category: string) {
     if ($link.length === 0) {
       return;
     }
+    const logoPath = resolve('/', $link.find('img').attr('src')!);
     return {
       category,
       name: $link.find('img').attr('alt')!.trim(),
-      logo: `https://www.ecma-international.org${resolve('/', $link.find('img').attr('src')!)}`,
+      logo: `https://www.ecma-international.org${logoPath}`,
       href: $link.attr('href')!,
     };
   });
