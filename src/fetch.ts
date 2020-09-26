@@ -104,8 +104,8 @@ async function getProposals() {
       subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
 
-      meeting_at: getMeetingAt(proposal.meeting),
       created_at: data?.created_at,
+      meeting_at: getMeetingAt(proposal.meeting),
       pushed_at: data?.pushed_at,
     });
   }

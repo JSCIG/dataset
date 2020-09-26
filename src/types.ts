@@ -34,8 +34,8 @@ export interface ExportedProposalRecord {
   subscribers_count?: number;
   watchers_count?: number;
 
-  meeting_at?: string;
   created_at?: string;
+  meeting_at?: string;
   pushed_at?: string;
 }
 
