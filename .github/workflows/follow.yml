@@ -27,9 +27,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Prettier JSON
-        run: npx prettier -w dist/proposals.json dist/members-*.json
+        run: npx prettier -w .
+        working-directory: dist
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
+          enable_jekyll: true
