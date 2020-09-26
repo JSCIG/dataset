@@ -104,7 +104,6 @@ async function getProposals() {
       forks_count: data?.forks_count,
       open_issues_count: data?.open_issues_count,
       stargazers_count: data?.stargazers_count,
-      subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
 
       created_at: data?.created_at ? new Date(data?.created_at) : undefined,
