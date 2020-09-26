@@ -66,12 +66,12 @@ async function getProposals() {
           });
           data = response.data;
         } catch (error) {
-          console.error(`[Skip] \`${proposal.name}\``, error);
+          console.error('::warning::[Skip]', proposal.name, error);
           continue;
         }
       }
       if (data.owner.login !== result.owner || data.name !== result.name) {
-        console.error('[Transferred]', proposal.link, '->', data.html_url);
+        console.error('::warning::[Transferred]', proposal.link, '->', data.html_url);
       }
     }
     console.log(`Added \`${proposal.name}\``);
