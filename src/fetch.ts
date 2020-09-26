@@ -139,34 +139,28 @@ function makeTags(tags: string[], flags: Record<string, boolean | undefined>) {
 }
 
 async function main() {
-  console.group('Rate limit');
+  console.log('Rate limit');
   console.log(await getRateLimit());
-  console.groupEnd();
 
-  console.group('Fetch ECMA Members');
+  console.log('Fetch ECMA Members');
   const ecmaMembers = await makeECMAMembers();
   await fs.writeFile('dist/members-ecma.json', JSON.stringify(ecmaMembers, null, 2));
-  console.groupEnd();
 
-  console.group('Fetch TC39 Members');
+  console.log('Fetch TC39 Members');
   const tc39Members = await getMembers('tc39');
   await fs.writeFile('dist/members-tc39.json', JSON.stringify(tc39Members, null, 2));
-  console.groupEnd();
 
-  console.group('Fetch JSCIG Members');
+  console.log('Fetch JSCIG Members');
   const jscigMembers = await getMembers('JSCIG');
   await fs.writeFile('dist/members-jscig.json', JSON.stringify(jscigMembers, null, 2));
-  console.groupEnd();
 
-  console.group('Fetch TC39 Proposals');
+  console.log('Fetch TC39 Proposals');
   const proposals = await getProposals();
   await fs.writeFile('dist/proposals.json', JSON.stringify(proposals, null, 2));
   await fs.writeFile('dist/proposals.min.json', JSON.stringify(proposals));
-  console.groupEnd();
 
-  console.group('Rate limit');
+  console.log('Rate limit');
   console.log(await getRateLimit());
-  console.groupEnd();
 }
 
 main().catch((err) => {
