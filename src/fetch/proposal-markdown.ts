@@ -39,13 +39,13 @@ function* readProposals(tags: string[], stages: number[], content: string): Gene
       yield {
         tags,
         stage: stages[i],
-        name: row.name?.text,
-        link: _.values(row.name?.links)[0],
+        name: row.name?.text?.trim(),
+        link: _.values(row.name?.links)[0]?.trim(),
         authors: splitPeopleNames(row.author?.text),
         champions: splitPeopleNames(row.champion?.text),
-        meeting: _.values(row.meeting?.links)[0],
-        tests: _.values(row.tests?.links)[0],
-        rationale: row.rationale?.text,
+        meeting: _.values(row.meeting?.links)[0]?.trim(),
+        tests: _.values(row.tests?.links)[0]?.trim(),
+        rationale: row.rationale?.text?.trim(),
         edition: row.edition ? +row.edition.text : undefined,
       };
     }

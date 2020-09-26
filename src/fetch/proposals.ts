@@ -43,7 +43,7 @@ export async function getProposals() {
       stage: proposal.stage,
       name: proposal.name,
 
-      description: data?.description ?? undefined,
+      description: data?.description?.trim() ?? undefined,
       rationale: proposal.rationale,
 
       link: proposal.link?.includes('/blob/master/') ? proposal.link : data?.html_url ?? proposal.link,
