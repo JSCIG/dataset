@@ -34,9 +34,9 @@ export interface ExportedProposalRecord {
   subscribers_count?: number;
   watchers_count?: number;
 
-  created_at?: string;
-  meeting_at?: string;
-  pushed_at?: string;
+  created_at?: Date;
+  meeting_at?: Date;
+  pushed_at?: Date;
 }
 
 export interface ECMAMember {

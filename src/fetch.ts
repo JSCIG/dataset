@@ -104,28 +104,20 @@ async function getProposals() {
       subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
 
-      created_at: data?.created_at,
+      created_at: data?.created_at ? new Date(data?.created_at) : undefined,
       meeting_at: getMeetingAt(proposal.meeting),
-      pushed_at: data?.pushed_at,
+      pushed_at: data?.pushed_at ? new Date(data?.pushed_at) : undefined,
     });
   }
   return _.chain(records)
-    .sortBy(({ created_at, meeting_at, stage }) => {
-      const at = created_at ?? meeting_at;
-      return at ? new Date(at) : stage;
-    })
+    .sortBy(({ created_at, meeting_at, stage }) => created_at ?? meeting_at ?? stage)
     .reverse()
     .value();
 }
 
 function getMeetingAt(meeting?: string) {
-  if (_.isNil(meeting)) {
-    return;
-  } else if (/\/meetings\/(\d+)\-(\d+)\/\w+\-(\d+)\.md/.test(meeting)) {
-    const year = +RegExp.$1;
-    const month = +RegExp.$2;
-    const date = +RegExp.$3;
-    return new Date(year, month - 1, date).toISOString();
+  if (meeting && /\/meetings\/(\d+)\-(\d+)\/\w+\-(\d+)\.md/.test(meeting)) {
+    return new Date(+RegExp.$1, +RegExp.$2 - 1, +RegExp.$3);
   }
   return;
 }
