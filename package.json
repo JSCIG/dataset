@@ -1,8 +1,6 @@
 {
   "name": "tc39-dataset",
-  "version": "1.0.0",
   "description": "TC39 Proposals latest status",
-  "repository": "https://github.com/septs/tc39-dataset",
   "license": "Public Domain",
   "author": "JSCIG",
   "dependencies": {
