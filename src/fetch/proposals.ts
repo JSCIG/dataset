@@ -57,7 +57,6 @@ export async function getProposals() {
       forks_count: data?.forks_count,
       open_issues_count: data?.open_issues_count,
       stargazers_count: data?.stargazers_count,
-      watchers_count: data?.watchers_count,
 
       created_at: getCreatedAt(data?.created_at, proposal.link),
       meeting_at: getMeetingAt(proposal.meeting),

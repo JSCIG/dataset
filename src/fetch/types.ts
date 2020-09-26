@@ -31,7 +31,6 @@ export interface ExportedProposalRecord {
   forks_count?: number;
   open_issues_count?: number;
   stargazers_count?: number;
-  watchers_count?: number;
 
   created_at?: Date;
   meeting_at?: Date;
