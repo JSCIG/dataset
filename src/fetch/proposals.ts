@@ -62,7 +62,7 @@ export async function getProposals() {
       stargazers_count: data?.stargazers_count,
       watchers_count: data?.watchers_count,
 
-      created_at: data?.created_at ? new Date(data?.created_at) : undefined,
+      created_at: getCreatedAt(data?.created_at, proposal.link),
       meeting_at: getMeetingAt(proposal.meeting),
       pushed_at: data?.pushed_at ? new Date(data?.pushed_at) : undefined,
     });
@@ -71,6 +71,15 @@ export async function getProposals() {
     .sortBy(({ created_at, meeting_at, stage }) => created_at ?? meeting_at ?? stage)
     .reverse()
     .value();
+}
+
+function getCreatedAt(created_at?: string, link?: string) {
+  if (created_at) {
+    return new Date(created_at);
+  } else if (link && /archive\.org\/web\/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/i.test(link)) {
+    return new Date(+RegExp.$1, +RegExp.$2 - 1, +RegExp.$3, +RegExp.$4, +RegExp.$5, +RegExp.$6);
+  }
+  return;
 }
 
 function getMeetingAt(meeting?: string) {
