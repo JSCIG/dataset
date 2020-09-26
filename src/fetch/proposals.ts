@@ -16,10 +16,7 @@ export async function getProposals() {
       data = repos.find(({ owner, name }) => owner.login === result.owner && name === result.name);
       if (_.isNil(data)) {
         try {
-          const response = await github.repos.get({
-            owner: result.owner!,
-            repo: result.name!,
-          });
+          const response = await github.repos.get({ owner: result.owner!, repo: result.name! });
           data = response.data;
         } catch (error) {
           console.error('::warning::[Skip]', proposal.name, error);

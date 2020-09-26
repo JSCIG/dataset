@@ -6,9 +6,7 @@ export const github = new Octokit({
 
 export async function getRateLimit() {
   const { data } = await github.rateLimit.get();
-  return {
-    limit: data.rate.limit,
-    remaining: data.rate.remaining,
-    reset: new Date(data.rate.reset * 1000).toISOString(),
-  };
+  const { limit, remaining } = data.rate;
+  const reset = new Date(data.rate.reset * 1000).toISOString();
+  return `Rate limit: ${limit}, Remaining: ${remaining}, Reset Date: ${reset}`;
 }

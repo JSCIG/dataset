@@ -5,7 +5,6 @@ import { getJSCIGMembers, getTC39Members } from './fetch/members-github';
 import { getProposals } from './fetch/proposals';
 
 async function main() {
-  console.log('Rate limit');
   console.log(await getRateLimit());
 
   console.log('Fetch ECMA Members');
@@ -22,7 +21,6 @@ async function main() {
   await fs.writeFile('dist/proposals.json', JSON.stringify(proposals));
   await fs.writeFile('dist/proposals.min.json', JSON.stringify(proposals));
 
-  console.log('Rate limit');
   console.log(await getRateLimit());
 }
 
