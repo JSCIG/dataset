@@ -104,6 +104,7 @@ async function getProposals() {
       subscribers_count: data?.subscribers_count,
       watchers_count: data?.watchers_count,
 
+      meeting_at: getMeetingAt(proposal.meeting),
       created_at: data?.created_at,
       pushed_at: data?.pushed_at,
     });
@@ -112,6 +113,18 @@ async function getProposals() {
     .sortBy((record) => (record.created_at ? new Date(record.created_at) : record.stage))
     .reverse()
     .value();
+}
+
+function getMeetingAt(meeting?: string) {
+  if (_.isNil(meeting)) {
+    return;
+  } else if (/\/meetings\/(\d+)\-(\d+)\/\w+\-(\d+)\.md/.test(meeting)) {
+    const year = +RegExp.$1;
+    const month = +RegExp.$2;
+    const date = +RegExp.$3;
+    return new Date(year, month - 1, date).toISOString();
+  }
+  return;
 }
 
 async function getRateLimit() {
