@@ -11,14 +11,13 @@ const github = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-async function makeMembers(org: string) {
+async function getMembers(org: string) {
   let members: any[] = [];
   let page = 0;
   while (true) {
     const { data } = await github.orgs.listMembers({ org, per_page: 100, page });
     for (const member of data) {
       const { data: user } = await github.users.getByUsername({ username: member.login });
-      console.log('Added', member.login);
       members.push({
         name: user.name?.trim() ?? user.login,
         username: user.login,
@@ -51,7 +50,7 @@ async function getTC39Repos() {
   return repos;
 }
 
-async function makeProposals() {
+async function getProposals() {
   const repos = await getTC39Repos();
   const records: ExportedProposalRecord[] = [];
   for (const proposal of await readAllProposals()) {
@@ -115,27 +114,48 @@ async function makeProposals() {
     .value();
 }
 
+async function getRateLimit() {
+  const { data } = await github.rateLimit.get();
+  return {
+    limit: data.rate.limit,
+    remaining: data.rate.remaining,
+    reset: new Date(data.rate.reset * 1000).toISOString(),
+  };
+}
+
 function makeTags(tags: string[], flags: Record<string, boolean | undefined>) {
   return _.concat(tags, _.keys(_.pickBy(flags, (value) => value === true)));
 }
 
 async function main() {
-  console.log('Fetch ECMA Members');
+  console.group('Rate limit');
+  console.log(await getRateLimit());
+  console.groupEnd();
+
+  console.group('Fetch ECMA Members');
   const ecmaMembers = await makeECMAMembers();
   await fs.writeFile('dist/members-ecma.json', JSON.stringify(ecmaMembers, null, 2));
+  console.groupEnd();
 
-  console.log('Fetch TC39 Members');
-  const tc39Members = await makeMembers('tc39');
+  console.group('Fetch TC39 Members');
+  const tc39Members = await getMembers('tc39');
   await fs.writeFile('dist/members-tc39.json', JSON.stringify(tc39Members, null, 2));
+  console.groupEnd();
 
-  console.log('Fetch JSCIG Members');
-  const jscigMembers = await makeMembers('JSCIG');
+  console.group('Fetch JSCIG Members');
+  const jscigMembers = await getMembers('JSCIG');
   await fs.writeFile('dist/members-jscig.json', JSON.stringify(jscigMembers, null, 2));
+  console.groupEnd();
 
-  console.log('Fetch TC39 Proposals');
-  const proposals = await makeProposals();
+  console.group('Fetch TC39 Proposals');
+  const proposals = await getProposals();
   await fs.writeFile('dist/proposals.json', JSON.stringify(proposals, null, 2));
   await fs.writeFile('dist/proposals.min.json', JSON.stringify(proposals));
+  console.groupEnd();
+
+  console.group('Rate limit');
+  console.log(await getRateLimit());
+  console.groupEnd();
 }
 
 main().catch((err) => {
