@@ -1,7 +1,7 @@
 import cheerio from 'cheerio';
-import _ from 'lodash';
 import fetch from 'node-fetch';
 import { resolve } from 'path';
+import url from 'url';
 import { ECMAMember } from './types';
 
 function* fetchMembers(category: string, text: string): Generator<ECMAMember> {
@@ -17,9 +17,21 @@ function* fetchMembers(category: string, text: string): Generator<ECMAMember> {
       category,
       name: $link.find('img').attr('alt')!.trim(),
       logo: `https://www.ecma-international.org${logoPath}`,
-      href: $link.attr('href')!,
+      href: normalizeURL($link.attr('href')!),
     };
   }
+}
+
+function normalizeURL(link: string) {
+  const parsed = url.parse(link);
+  if (parsed.path === '/' || parsed.pathname === '/') {
+    parsed.path = '';
+    parsed.pathname = '';
+  }
+  if (parsed.host && !/\.(lyten|htbox|korea|oitda|ict)\./.test(parsed.host)) {
+    parsed.protocol = 'https:';
+  }
+  return url.format(parsed);
 }
 
 export async function makeECMAMembers() {
