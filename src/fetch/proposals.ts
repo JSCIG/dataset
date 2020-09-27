@@ -19,12 +19,12 @@ export async function getProposals() {
           const response = await github.repos.get({ owner: result.owner!, repo: result.name! });
           data = response.data;
         } catch (error) {
-          console.error('::warning::[Skip]', proposal.name, error);
+          console.error('::error::[Skip]', proposal.link, error.message);
           continue;
         }
       }
       if (data.owner.login !== result.owner || data.name !== result.name) {
-        console.error('::warning::[Transferred]', proposal.link, '->', data.html_url);
+        console.error('::error::[Transferred]', proposal.link, '->', data.html_url);
       }
     }
     console.log(`Added \`${proposal.name}\``);
