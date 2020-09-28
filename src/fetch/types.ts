@@ -21,8 +21,9 @@ export interface ExportedProposalRecord {
   rationale?: string;
 
   link?: string;
-  meeting?: string;
+  spec?: string;
   tests?: string;
+  meeting?: string;
   edition?: number;
 
   authors?: string[];

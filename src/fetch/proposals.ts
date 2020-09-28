@@ -1,5 +1,6 @@
 import { ReposGetResponseData, ReposListForOrgResponseData } from '@octokit/types';
 import _ from 'lodash';
+import fetch from 'node-fetch';
 import parseGithubURL from 'parse-github-url';
 import { github } from './github';
 import { readAllProposals } from './proposal-markdown';
@@ -28,6 +29,14 @@ export async function getProposals() {
       }
     }
     console.log(`Added \`${proposal.name}\``);
+    let spec: string | undefined;
+    if (data?.owner.login === 'tc39' && /^proposal-/.test(data.name)) {
+      spec = `https://tc39.es/${data.name}/`;
+      const response = await fetch(spec, { method: 'HEAD' });
+      if (response.status !== 200) {
+        spec = undefined;
+      }
+    }
     records.push({
       tags: makeTags(proposal.tags, {
         'inactive': proposal.stage === -1,
@@ -47,8 +56,9 @@ export async function getProposals() {
       rationale: proposal.rationale,
 
       link: proposal.link?.includes('/blob/master/') ? proposal.link : data?.html_url ?? proposal.link,
-      meeting: proposal.meeting,
+      spec,
       tests: proposal.tests,
+      meeting: proposal.meeting,
       edition: proposal.edition ? +proposal.edition : undefined,
 
       authors: proposal.authors,
