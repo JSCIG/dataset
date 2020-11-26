@@ -9,7 +9,7 @@ on:
 
 jobs:
   follow:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2
@@ -17,8 +17,6 @@ jobs:
           repository: tc39/proposals
           path: proposals
       - uses: actions/setup-node@v2-beta
-        with:
-          node-version: 14.x
       - name: Install
         run: npm ci
       - name: Make dataset
