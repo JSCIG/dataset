@@ -2,6 +2,10 @@
 
 This project provide TC39 proposal latest status
 
+## Move to @tc39
+
+<https://github.com/tc39/dataset>
+
 ## "API"
 
 - [ECMA Members][members-ecma]
