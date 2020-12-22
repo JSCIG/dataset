@@ -1,0 +1,772 @@
+[
+  {
+    "name": "月影",
+    "username": "akira-cn",
+    "url": "https://github.com/akira-cn",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/316498?v=4",
+    "company": "ByteDance",
+    "location": "Beijing,China",
+    "bio": "Member of @75team"
+  },
+  {
+    "name": "Allen Wirfs-Brock",
+    "username": "allenwb",
+    "url": "https://github.com/allenwb",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/505435?v=4",
+    "company": "Wirfs-Brock Associates",
+    "location": "Sherwood Oregon USA"
+  },
+  {
+    "name": "Andy Fleming",
+    "username": "andyfleming",
+    "url": "https://github.com/andyfleming",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/721038?v=4",
+    "company": "GoDaddy",
+    "location": "Kirkland, WA"
+  },
+  {
+    "name": "Anne van Kesteren",
+    "username": "annevk",
+    "url": "https://github.com/annevk",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1544111?v=4",
+    "company": "@mozilla",
+    "bio": "Weird, but potentially useful immigrant · engine diversity absolutist · #BlackLivesMatter · he/him"
+  },
+  {
+    "name": "Erik Arvidsson",
+    "username": "arv",
+    "url": "https://github.com/arv",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/45845?v=4",
+    "company": "@rocicorp",
+    "location": "San Francisco"
+  },
+  {
+    "name": "ashley williams",
+    "username": "ashleygwilliams",
+    "url": "https://github.com/ashleygwilliams",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1163554?v=4",
+    "company": "@rust-lang",
+    "location": "ATX",
+    "bio": "a mess like this is easily five to ten years ahead of its time. @rustlang core. rustWASM WG. former @nodejs director, @npmjs, @mozilla."
+  },
+  {
+    "name": "Ben Newman",
+    "username": "benjamn",
+    "url": "https://github.com/benjamn",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/5750?v=4",
+    "company": "Meteor/Apollo (formerly: Facebook/Instagram, Quora, Mozilla)",
+    "location": "New York City"
+  },
+  {
+    "name": "Bethany Nicolle Griggs",
+    "username": "BethGriggs",
+    "url": "https://github.com/BethGriggs",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/8297234?v=4",
+    "company": "Red Hat",
+    "location": "United Kingdom",
+    "bio": "Node.js @ Red Hat"
+  },
+  {
+    "name": "Bradley Farias",
+    "username": "bmeck",
+    "url": "https://github.com/bmeck",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/234659?v=4",
+    "location": "Austin, Texas"
+  },
+  {
+    "name": "Tierney Cyren",
+    "username": "bnb",
+    "url": "https://github.com/bnb",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/502396?v=4",
+    "company": "@Microsoft",
+    "location": "Brooklyn, NY",
+    "bio": "⬡.js - Developer Advocacy @microsoft. @nodejs. @tc39. @openjs-foundation. @electron. human clickbait. stringly typed. he/they. demiboy."
+  },
+  { "name": "Boaz", "username": "boazsender", "url": "https://github.com/boazsender", "avatar_url": "https://avatars3.githubusercontent.com/u/122117?v=4" },
+  {
+    "name": ".DS_Storoz",
+    "username": "brittanydionigi",
+    "url": "https://github.com/brittanydionigi",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/856935?v=4",
+    "company": "Mozilla",
+    "location": "Boston"
+  },
+  {
+    "name": "Brian Terlson",
+    "username": "bterlson",
+    "url": "https://github.com/bterlson",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/11236?v=4",
+    "company": "@Microsoft",
+    "location": "Redmond, WA"
+  },
+  {
+    "name": "Sergey Rubanov",
+    "username": "chicoxyzzy",
+    "url": "https://github.com/chicoxyzzy",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1507086?v=4",
+    "bio": "Helping @tc39 and striving to bring @WebAssembly to your web browser. Working on standards and tools on my spare time. Wanna do it full-time. 🤖. he/him"
+  },
+  {
+    "name": "Songfeng Li（李松峰）",
+    "username": "cncuckoo",
+    "url": "https://github.com/cncuckoo",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/88485?v=4",
+    "company": "ByteDance",
+    "location": "Beijing",
+    "bio": "Web developer, technical translator"
+  },
+  {
+    "name": "Shelley Vohr",
+    "username": "codebytere",
+    "url": "https://github.com/codebytere",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2036040?v=4",
+    "company": "msft",
+    "location": "San Francisco",
+    "bio": "core eng @electron. tsc @nodejs. organizer @queerjs 🏳️‍🌈. misc @tc39 @openjsf. way too online. often caffeinated. cruciverbalist. she/her."
+  },
+  {
+    "name": "Daniel Rosenwasser",
+    "username": "DanielRosenwasser",
+    "url": "https://github.com/DanielRosenwasser",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/972891?v=4",
+    "company": "@Microsoft",
+    "location": "Seattle, WA",
+    "bio": "Program Manager of TypeScript"
+  },
+  { "name": "Dave", "username": "davethegr8", "url": "https://github.com/davethegr8", "avatar_url": "https://avatars0.githubusercontent.com/u/55392?v=4" },
+  {
+    "name": "Devin Rousso",
+    "username": "dcrousso",
+    "url": "https://github.com/dcrousso",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4356609?v=4"
+  },
+  {
+    "name": "Jonathan Keslin",
+    "username": "decompil3d",
+    "url": "https://github.com/decompil3d",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/21011599?v=4",
+    "company": "@GoDaddy",
+    "location": "Kirkland, WA",
+    "bio": "Father, husband, Director of Engineering - UX Platform @godaddy, beer geek."
+  },
+  {
+    "name": "devsnek",
+    "username": "devsnek",
+    "url": "https://github.com/devsnek",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5952481?v=4",
+    "company": "@nodejs @tc39 @WebAssembly @OpenJS-Foundation",
+    "location": "The Open Web",
+    "bio": "maker of overly complex interpreted languages | they/them"
+  },
+  {
+    "name": "Dave Herman",
+    "username": "dherman",
+    "url": "https://github.com/dherman",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/307871?v=4",
+    "company": "LinkedIn",
+    "location": "San Francisco, CA"
+  },
+  {
+    "name": "Diego Ferreiro Val",
+    "username": "diervo",
+    "url": "https://github.com/diervo",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1176744?v=4",
+    "company": "@salesforce",
+    "location": "San Francisco",
+    "bio": "Principal Architect @salesforce. Co-architect of Lightning Web Components. Open source and open standards advocate | @tc39 @w3c AC rep"
+  },
+  {
+    "name": "Tim Disney",
+    "username": "disnet",
+    "url": "https://github.com/disnet",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2362?v=4",
+    "company": "@shapesecurity"
+  },
+  {
+    "name": "Domenic Denicola",
+    "username": "domenic",
+    "url": "https://github.com/domenic",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/617481?v=4",
+    "company": "Google",
+    "location": "New York, NY"
+  },
+  {
+    "name": "Dustin Savery",
+    "username": "dustinsavery",
+    "url": "https://github.com/dustinsavery",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/2447456?v=4",
+    "company": "@nvidia, @painted-pixels, Former @lyft, @godaddy",
+    "location": "Seattle, WA",
+    "bio": "Designer and Developer on the internets"
+  },
+  {
+    "name": "Eric Ferraiuolo",
+    "username": "ericf",
+    "url": "https://github.com/ericf",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/29096?v=4",
+    "company": "Apple",
+    "location": "Cambridge, MA",
+    "bio": "Trying to make the web better for people."
+  },
+  {
+    "name": "Felipe Balbontín",
+    "username": "fabalbon",
+    "url": "https://github.com/fabalbon",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1465795?v=4"
+  },
+  {
+    "name": "Fabio Rocha",
+    "username": "fabiorocha",
+    "url": "https://github.com/fabiorocha",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1686833?v=4",
+    "company": "Microsoft",
+    "location": "Seattle, WA",
+    "bio": "Software Engineer building tools for web devs @Microsoft.\r\n\r\nOpinions are my own."
+  },
+  {
+    "name": "Federico Bucchi",
+    "username": "federicobucchi",
+    "url": "https://github.com/federicobucchi",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/59409?v=4",
+    "company": "Apple",
+    "location": "San Francisco (CA)",
+    "bio": "Information and Communications Technology, Computer Science, Social Networking and the web are my life. Opinions & Ideas are mine. Messages are confidential."
+  },
+  {
+    "name": "F. Hinkelmann",
+    "username": "fhinkel",
+    "url": "https://github.com/fhinkel",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/101553?v=4",
+    "company": "Google",
+    "location": "New York",
+    "bio": "Ph.D software engineer working on Node.js at Google. Node.js  TSC member. ❤️ JavaScript."
+  },
+  {
+    "name": "Aki",
+    "username": "gesa",
+    "url": "https://github.com/gesa",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/782056?v=4",
+    "company": "@tc39; @crimethinc; @braintree;"
+  },
+  {
+    "name": "Guilherme Hermeto",
+    "username": "ghermeto",
+    "url": "https://github.com/ghermeto",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/224782?v=4",
+    "company": "Netflix",
+    "location": "Morgan Hill, CA"
+  },
+  {
+    "name": "Gibson Fahnestock",
+    "username": "gibfahn",
+    "url": "https://github.com/gibfahn",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/15943089?v=4",
+    "location": "London, UK"
+  },
+  {
+    "name": "Gabriel Isenberg",
+    "username": "gisenberg",
+    "url": "https://github.com/gisenberg",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/641505?v=4",
+    "company": "Riot Games",
+    "location": "Seattle, WA"
+  },
+  { "name": "Gorkem Yakin", "username": "goyakin", "url": "https://github.com/goyakin", "avatar_url": "https://avatars1.githubusercontent.com/u/12926423?v=4" },
+  {
+    "name": "Sathya Gunasekaran",
+    "username": "gsathya",
+    "url": "https://github.com/gsathya",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/565765?v=4",
+    "company": "@google",
+    "bio": "@v8"
+  },
+  {
+    "name": "HE Shi-Jun",
+    "username": "hax",
+    "url": "https://github.com/hax",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/159840?v=4",
+    "location": "Shanghai, China"
+  },
+  {
+    "name": "hemanth.hm",
+    "username": "hemanth",
+    "url": "https://github.com/hemanth",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/18315?v=4",
+    "company": "@paypal",
+    "location": "California",
+    "bio": "A computer polyglot CLI, web and unix philosophy ❤️'r.\r\nGoogle Developer Expert.\r\nGoogle LaunchPad Mentor\r\nCommunity leader @duckduckgo Delegate at @tc39"
+  },
+  {
+    "name": "Rebecca Turner",
+    "username": "iarna",
+    "url": "https://github.com/iarna",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/983798?v=4",
+    "company": "@microsoft",
+    "location": "Oakland, CA"
+  },
+  {
+    "name": "Ilias Tsangaris",
+    "username": "ilias-t",
+    "url": "https://github.com/ilias-t",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/4505008?v=4",
+    "company": "@evernote"
+  },
+  {
+    "name": "Isaac Durazo",
+    "username": "isaacdurazo",
+    "url": "https://github.com/isaacdurazo",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1379244?v=4",
+    "company": "Bocoup.com"
+  },
+  {
+    "name": "Jack Works",
+    "username": "Jack-Works",
+    "url": "https://github.com/Jack-Works",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/5390719?v=4",
+    "location": "Web"
+  },
+  {
+    "name": "Jack Steinberg",
+    "username": "jackbsteinberg",
+    "url": "https://github.com/jackbsteinberg",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/49928364?v=4",
+    "company": "Google",
+    "location": "New York"
+  },
+  {
+    "name": "Jamie Kyle",
+    "username": "jamiebuilds",
+    "url": "https://github.com/jamiebuilds",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/952783?v=4",
+    "company": "@discord",
+    "location": "Oakland, CA"
+  },
+  {
+    "name": "Jason Nutter",
+    "username": "jasonnutter",
+    "url": "https://github.com/jasonnutter",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/443409?v=4",
+    "company": "@microsoft",
+    "location": "Seattle",
+    "bio": "Senior Software Engineer @microsoft, working on MSAL.js."
+  },
+  {
+    "name": "Jason Williams",
+    "username": "jasonwilliams",
+    "url": "https://github.com/jasonwilliams",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/936006?v=4",
+    "company": "@Bloomberg",
+    "location": "London, England",
+    "bio": "Software Engineer @ Bloomberg"
+  },
+  {
+    "name": "John-David Dalton",
+    "username": "jdalton",
+    "url": "https://github.com/jdalton",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/4303?v=4",
+    "company": "Salesforce",
+    "bio": "JavaScript tinkerer, bug fixer, & benchmark runner • Creator of Lodash • Salesforce UI Security Engineer (former MS Web Platform DX PM, Chakra Perf PM)"
+  },
+  {
+    "name": "Jeff Morrison",
+    "username": "jeffmo",
+    "url": "https://github.com/jeffmo",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/498293?v=4",
+    "location": "Cambridge, MA"
+  },
+  {
+    "name": "Joe Sepi",
+    "username": "joesepi",
+    "url": "https://github.com/joesepi",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/143668?v=4",
+    "company": "@IBM",
+    "location": "New York, NY",
+    "bio": "Open-Source Engineer + 🥑 @IBM ⚡️ Gtr/Vox @LeastBestBeast & #MustardTiger ⚡️ OpenJS CPC Chair ⚡️ TC39 delegate ⚡️ @nodejs CommComm ⚡️"
+  },
+  {
+    "name": "Justin Ridgewell",
+    "username": "jridgewell",
+    "url": "https://github.com/jridgewell",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/112982?v=4",
+    "company": "@google -> @ampproject",
+    "location": "New York, NY"
+  },
+  {
+    "name": "Keith Cirkel",
+    "username": "keithamus",
+    "url": "https://github.com/keithamus",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/118266?v=4",
+    "location": "London, England",
+    "bio": "Works on JavaScript at @github.\r\nMaintainer of @chaijs."
+  },
+  {
+    "name": "Kent C. Dodds",
+    "username": "kentcdodds",
+    "url": "https://github.com/kentcdodds",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
+    "company": "@kentcdodds",
+    "location": "Salt Lake City, Utah, USA",
+    "bio": "Improving the world w/ quality software · Husband, Father, Latter-day Saint, Teacher, OSS · http://TestingJavaScript.com · http://EpicReact.Dev · Be Kind"
+  },
+  {
+    "name": "Kris Kowal",
+    "username": "kriskowal",
+    "url": "https://github.com/kriskowal",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/60294?v=4",
+    "location": "San Francisco Bay Area, CA, USA",
+    "bio": "Open sourcerer."
+  },
+  {
+    "name": "legendecas",
+    "username": "legendecas",
+    "url": "https://github.com/legendecas",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/8500303?v=4",
+    "bio": "lost in universe"
+  },
+  {
+    "name": "Leo Balter",
+    "username": "leobalter",
+    "url": "https://github.com/leobalter",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/301201?v=4",
+    "company": "@salesforce",
+    "location": "Bay Area, CA",
+    "bio": "I work with Web Standards at Salesforce.\r\n\r\nCurrently:\r\n\r\n- Web Components related Standards\r\n- ECMAScript / TC39\r\n- Editor of ECMA-402 Intl API\r\n- Test262"
+  },
+  {
+    "name": "Limin Zhu",
+    "username": "liminzhu",
+    "url": "https://github.com/liminzhu",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1158954?v=4",
+    "company": "Microsoft",
+    "location": "Redmond, WA"
+  },
+  {
+    "name": "Lin Clark",
+    "username": "linclark",
+    "url": "https://github.com/linclark",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/105464?v=4",
+    "company": "Fastly",
+    "location": "Pittsburgh, PA"
+  },
+  {
+    "name": "Daniel Ehrenberg",
+    "username": "littledan",
+    "url": "https://github.com/littledan",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/189835?v=4",
+    "company": "Igalia",
+    "bio": "Working on V8 and web standards, especially TC39."
+  },
+  {
+    "name": "Jordan Harband",
+    "username": "ljharb",
+    "url": "https://github.com/ljharb",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/45469?v=4",
+    "location": "Hillsborough, CA",
+    "bio": "software engineer/nerd/teacher/will try anything once; surgeon with git rebase. @tc39, ex @airbnb @twitter @MobBase @tripit. Fav punctuation ⸮, scent petrichor"
+  },
+  {
+    "name": "Maggie Johnson-Pint",
+    "username": "maggiepint",
+    "url": "https://github.com/maggiepint",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6054610?v=4",
+    "company": "@Microsoft",
+    "location": "Redmond, WA"
+  },
+  {
+    "name": "Mathias Bynens",
+    "username": "mathiasbynens",
+    "url": "https://github.com/mathiasbynens",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/81942?v=4",
+    "company": "@Google",
+    "bio": "Web standards fanatic. JavaScript, HTML, CSS, HTTP, performance, security, Bash, Unicode, macOS."
+  },
+  {
+    "name": "Mattijs Hoitink",
+    "username": "mattijs",
+    "url": "https://github.com/mattijs",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/43753?v=4",
+    "location": "lost"
+  },
+  {
+    "name": "Michael Ficarra",
+    "username": "michaelficarra",
+    "url": "https://github.com/michaelficarra",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/218840?v=4",
+    "company": "@shapesecurity",
+    "location": "Sunnyvale, CA"
+  },
+  {
+    "name": "Mike Murry",
+    "username": "mikemurry",
+    "url": "https://github.com/mikemurry",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/823846?v=4",
+    "location": "Seattle, WA",
+    "bio": "Web developer, UI engineer, designer, pixel builder."
+  },
+  {
+    "name": "Mike Samuel",
+    "username": "mikesamuel",
+    "url": "https://github.com/mikesamuel",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/368886?v=4",
+    "company": "Temper",
+    "location": "Princeton, NJ",
+    "bio": "Programming languages and security.   Previously, Google technical infrastructure."
+  },
+  {
+    "name": "Matt Johnson-Pint",
+    "username": "mj1856",
+    "url": "https://github.com/mj1856",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1396388?v=4",
+    "company": "@Microsoft",
+    "location": "Redmond, WA",
+    "bio": "Microsoftie (mattjoh).  StackOverflow junkie.  C# fan.  Time zone nerd."
+  },
+  {
+    "name": "Mark Cohen",
+    "username": "mpcsh",
+    "url": "https://github.com/mpcsh",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2894019?v=4",
+    "company": "@tc39",
+    "location": "Chicago, IL"
+  },
+  { "name": "muan", "username": "muan", "url": "https://github.com/muan", "avatar_url": "https://avatars3.githubusercontent.com/u/1153134?v=4" },
+  {
+    "name": "Myles Borins",
+    "username": "MylesBorins",
+    "url": "https://github.com/MylesBorins",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/498775?v=4",
+    "company": "@GitHub",
+    "location": "New York, New York",
+    "bio": "Artist, musician, developer, and maker / @nodejs TSC / @tc39 Co-Chair"
+  },
+  {
+    "name": "Szabolcs Szabolcsi-Toth",
+    "username": "necccc",
+    "url": "https://github.com/necccc",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/395398?v=4",
+    "company": "IBM Cloud",
+    "location": "Budapest, Hungary",
+    "bio": "Senior Engineer at IBM Cloud • @tc39 from IBM • Curator & organizer @JSConfBp & @cssconfbudapest & @frontendmeetup Budapest • Geek"
+  },
+  {
+    "name": "Nicolò Ribaudo",
+    "username": "nicolo-ribaudo",
+    "url": "https://github.com/nicolo-ribaudo",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/7000710?v=4",
+    "company": "@babel",
+    "location": "Turin, Italy",
+    "bio": "Math student and open source maintainer"
+  },
+  {
+    "name": "Bert Belder",
+    "username": "piscisaureus",
+    "url": "https://github.com/piscisaureus",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/218257?v=4",
+    "location": "Amsterdam"
+  },
+  {
+    "name": "Pieter Ouwerkerk",
+    "username": "pouwerkerk",
+    "url": "https://github.com/pouwerkerk",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/101547?v=4",
+    "company": "@runkitdev",
+    "location": "San Francisco"
+  },
+  {
+    "name": "Rick Button",
+    "username": "rickbutton",
+    "url": "https://github.com/rickbutton",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/831623?v=4",
+    "company": "@bloomberg",
+    "location": "NYC",
+    "bio": "senior yak shaver"
+  },
+  {
+    "name": "Ross Kirsling",
+    "username": "rkirsling",
+    "url": "https://github.com/rkirsling",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2172590?v=4",
+    "location": "San Mateo, CA"
+  },
+  {
+    "name": "Romulo Cintra",
+    "username": "romulocintra",
+    "url": "https://github.com/romulocintra",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1572026?v=4",
+    "location": "Barcelona",
+    "bio": "⚡ Web enthusiast  \r\n\r\n🤓  Learn Addict\r\n\r\n🤟🏿 Open Source Software  \r\n\r\n🔈 #JavaScript #WebComponents #WebDevelopment #PWA #Cloud"
+  },
+  {
+    "name": "Andreas Rossberg",
+    "username": "rossberg",
+    "url": "https://github.com/rossberg",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/4247099?v=4",
+    "company": "Google",
+    "bio": "Programming Language Researcher, Designer and Engineer (Dfinity, formerly Google & Max Planck Institute)"
+  },
+  {
+    "name": "Robin Ricard",
+    "username": "rricard",
+    "url": "https://github.com/rricard",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/246520?v=4",
+    "company": "@bloomberg",
+    "location": "London, UK",
+    "bio": "Software Engineer @bloomberg.\r\n@tc39 delegate."
+  },
+  {
+    "name": "Rafael Xavier de Souza",
+    "username": "rxaviers",
+    "url": "https://github.com/rxaviers",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/967155?v=4",
+    "company": "PayPal",
+    "location": "Sao Paulo, Brazil",
+    "bio": "Sr Sf Eng @paypal, @globalizejs project lead, former @jquery and @ibm, CS at USP (Brazil). Tech passionate. Like to solve problems, proactive and self learner"
+  },
+  {
+    "name": "Ujjwal Sharma",
+    "username": "ryzokuken",
+    "url": "https://github.com/ryzokuken",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/13121330?v=4",
+    "company": "@igalia",
+    "location": "New Delhi",
+    "bio": "Compilers Hacker @Igalia, Core Collaborator @nodejs. Ex: @electron @mutable @grofers GSoC. Working on @v8js @tc39 and more. C/C++, JavaScript, Rust. he/him."
+  },
+  {
+    "name": "Septs",
+    "username": "septs",
+    "url": "https://github.com/septs",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/3842474?v=4",
+    "company": "@NiceLabs and @tc39",
+    "location": "Shanghai, PRC",
+    "bio": "Senior Front-end Developer"
+  },
+  {
+    "name": "Alex Russell",
+    "username": "slightlyoff",
+    "url": "https://github.com/slightlyoff",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/97331?v=4",
+    "company": "Google",
+    "location": "San Francisco"
+  },
+  {
+    "name": "Sora Morimoto",
+    "username": "smorimoto",
+    "url": "https://github.com/smorimoto",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/38746192?v=4",
+    "location": "Tokyo, Japan",
+    "bio": "things aren't that simple. @ocaml @mirage @Solo5 @nabla-containers @tc39 @void-linux"
+  },
+  {
+    "name": "Steve Faulkner",
+    "username": "southpolesteve",
+    "url": "https://github.com/southpolesteve",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/471400?v=4",
+    "company": "@microsoft @azure @tc39",
+    "location": "Chicago",
+    "bio": "Engineering Lead on Microsoft Azure Cosmos. JavaScript/Python/APIs/Tooling"
+  },
+  {
+    "name": "Steven R. Loomis",
+    "username": "srl295",
+    "url": "https://github.com/srl295",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/855219?v=4",
+    "company": "@srl295",
+    "location": "in the <3 of und-US-u-rg-ustx-tz-uschi",
+    "bio": "me? i18n and @unicode-org stuff"
+  },
+  {
+    "name": "Dan Gohman",
+    "username": "sunfishcode",
+    "url": "https://github.com/sunfishcode",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4503403?v=4",
+    "bio": "I'm working on Wasmtime, WASI, and lots of things related to WebAssembly."
+  },
+  {
+    "name": "Tantek Çelik",
+    "username": "tantek",
+    "url": "https://github.com/tantek",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/46418?v=4",
+    "company": "@mozilla @indieweb @microformats",
+    "bio": "@Mozilla Web Standards Lead and @W3C AC&AB. Contributor @whatwg & @w3ctag, observer at @tc39. \r\nFounder: @BarCamp @microformats @indieweb"
+  },
+  {
+    "name": "Tom Care",
+    "username": "tcare",
+    "url": "https://github.com/tcare",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/707073?v=4",
+    "company": "Microsoft",
+    "location": "Seattle"
+  },
+  {
+    "name": "Timothy Gu",
+    "username": "TimothyGu",
+    "url": "https://github.com/TimothyGu",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1538624?v=4",
+    "company": "@UCLA",
+    "location": "New Jersey, USA",
+    "bio": "Tim (he/him)"
+  },
+  {
+    "name": "Till Schneidereit",
+    "username": "tschneidereit",
+    "url": "https://github.com/tschneidereit",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/56359?v=4",
+    "company": "@fastly @bytecodealliance",
+    "location": "Berlin, Germany"
+  },
+  {
+    "name": "welefen",
+    "username": "welefen",
+    "url": "https://github.com/welefen",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/40935?v=4",
+    "location": "Beijing, China",
+    "bio": "Author of ThinkJS, stcjs"
+  },
+  {
+    "name": "Whymarrh Whitby",
+    "username": "whymarrh",
+    "url": "https://github.com/whymarrh",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/1623628?v=4",
+    "company": "Web @1Password",
+    "location": "Newfoundland Time Zone"
+  },
+  {
+    "name": "Sven Sauleau",
+    "username": "xtuc",
+    "url": "https://github.com/xtuc",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1493671?v=4",
+    "location": "London, UK",
+    "bio": "https://twitter.com/svensauleau"
+  },
+  {
+    "name": "Yorkie Liu",
+    "username": "yorkie",
+    "url": "https://github.com/yorkie",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/1935767?v=4",
+    "bio": "Pop machine learning"
+  },
+  {
+    "name": "Younies Mahmoud",
+    "username": "younies",
+    "url": "https://github.com/younies",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1424844?v=4",
+    "company": "Google",
+    "location": "Zurich, Switzerland",
+    "bio": "Software Engineer at Google."
+  },
+  {
+    "name": "元彦",
+    "username": "yuanyan",
+    "url": "https://github.com/yuanyan",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/677114?v=4",
+    "company": "Alibaba",
+    "location": "China"
+  },
+  {
+    "name": "Kevin Smith",
+    "username": "zenparsing",
+    "url": "https://github.com/zenparsing",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5995084?v=4",
+    "company": "@brave"
+  }
+]

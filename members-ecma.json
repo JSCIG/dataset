@@ -1,0 +1,476 @@
+[
+  {
+    "category": "associat",
+    "name": "Airbnb",
+    "logo": "https://www.ecma-international.org/images/members/AM/Airbnb logo.gif",
+    "href": "https://www.airbnb.com"
+  },
+  {
+    "category": "associat",
+    "name": "Alibaba (China) Co., Ltd",
+    "logo": "https://www.ecma-international.org/images/members/AM/Alibaba logo.gif",
+    "href": "https://www.alibabagroup.com"
+  },
+  {
+    "category": "associat",
+    "name": "Apple",
+    "logo": "https://www.ecma-international.org/images/members/AM/Apple.gif",
+    "href": "https://www.apple.com"
+  },
+  {
+    "category": "associat",
+    "name": "Bloomberg",
+    "logo": "https://www.ecma-international.org/images/members/AM/Bloomberg logo.gif",
+    "href": "https://www.techatbloomberg.com"
+  },
+  {
+    "category": "associat",
+    "name": "Canon",
+    "logo": "https://www.ecma-international.org/images/members/AM/Canon.gif",
+    "href": "https://www.canon.com"
+  },
+  {
+    "category": "associat",
+    "name": "Coinbase, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/AM/Coinbase_logo.gif",
+    "href": "https://www.coinbase.com"
+  },
+  {
+    "category": "associat",
+    "name": "Dell Technologies, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/AM/Dell logo.gif",
+    "href": "https://www.dell.com"
+  },
+  {
+    "category": "associat",
+    "name": "F5 Networks",
+    "logo": "https://www.ecma-international.org/images/members/AM/F5 Networks logo.gif",
+    "href": "https://www.f5.com"
+  },
+  {
+    "category": "associat",
+    "name": "GoDaddy.com",
+    "logo": "https://www.ecma-international.org/images/members/AM/GoDaddy.com logo.gif",
+    "href": "https://www.godaddy.com"
+  },
+  {
+    "category": "associat",
+    "name": "HP, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/AM/HP Inc. logo.gif",
+    "href": "https://www.hp.com"
+  },
+  {
+    "category": "associat",
+    "name": "Huawei Technologies Co., Ltd",
+    "logo": "https://www.ecma-international.org/images/members/AM/Huawei logo.gif",
+    "href": "https://www.huawei.com"
+  },
+  {
+    "category": "associat",
+    "name": "Netflix",
+    "logo": "https://www.ecma-international.org/images/members/AM/Netflix logo.gif",
+    "href": "https://www.netflix.com"
+  },
+  {
+    "category": "associat",
+    "name": "Oracle America, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/AM/oracle_america_logo.gif",
+    "href": "https://www.oracle.com"
+  },
+  {
+    "category": "associat",
+    "name": "Ricoh",
+    "logo": "https://www.ecma-international.org/images/members/AM/Ricoh logo.gif",
+    "href": "https://www.ricoh.com"
+  },
+  {
+    "category": "associat",
+    "name": "salesforce.com",
+    "logo": "https://www.ecma-international.org/images/members/AM/salesforce.com logo.gif",
+    "href": "https://www.salesforce.com"
+  },
+  {
+    "category": "associat",
+    "name": "Sony Interactive Entertainment LLC",
+    "logo": "https://www.ecma-international.org/images/members/AM/Sony Interactive Entertainment logo.gif",
+    "href": "https://www.sony.net"
+  },
+  {
+    "category": "associat",
+    "name": "Tencent",
+    "logo": "https://www.ecma-international.org/images/members/AM/tencent_logo.gif",
+    "href": "https://www.tencent.com"
+  },
+  {
+    "category": "associat",
+    "name": "Qihoo 360",
+    "logo": "https://www.ecma-international.org/images/members/AM/Qihoo 360 logo.gif",
+    "href": "https://www.360.cn"
+  },
+  {
+    "category": "ordinary",
+    "name": "Facebook",
+    "logo": "https://www.ecma-international.org/images/members/AM/Facebook logo.gif",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "Google",
+    "logo": "https://www.ecma-international.org/images/members/OM/Google%20logo.gif",
+    "href": "https://www.google.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "Hitachi",
+    "logo": "https://www.ecma-international.org/images/members/OM/Hitachi.gif",
+    "href": "https://www.hitachi.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "IBM",
+    "logo": "https://www.ecma-international.org/images/members/OM/IBM.gif",
+    "href": "https://www.ibm.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "Intel",
+    "logo": "https://www.ecma-international.org/images/members/OM/intel_logo.gif",
+    "href": "https://www.intel.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "Konica Minolta",
+    "logo": "https://www.ecma-international.org/images/members/OM/Konica%20Minolta.gif",
+    "href": "https://konicaminolta.jp"
+  },
+  {
+    "category": "ordinary",
+    "name": "Microsoft",
+    "logo": "https://www.ecma-international.org/images/members/OM/Microsoft.gif",
+    "href": "https://www.microsoft.com"
+  },
+  {
+    "category": "ordinary",
+    "name": "RunKit, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/OM/RunKit logo.gif",
+    "href": "https://runkit.com"
+  },
+  {
+    "category": "sme",
+    "name": "Evernote Corporation",
+    "logo": "https://www.ecma-international.org/images/members/SME/Evernote logo.gif",
+    "href": "https://evernote.com"
+  },
+  {
+    "category": "sme",
+    "name": "HEAD acoustics",
+    "logo": "https://www.ecma-international.org/images/members/SME/HEAD acoustics logo.gif",
+    "href": "https://www.head-acoustics.com"
+  },
+  {
+    "category": "sme",
+    "name": "Igalia, S. L.",
+    "logo": "https://www.ecma-international.org/images/members/SME/Igalia logo.gif",
+    "href": "https://igalia.com"
+  },
+  {
+    "category": "sme",
+    "name": "LytEn, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/SME/lyten_logo.gif",
+    "href": "http://www.lyten.com"
+  },
+  {
+    "category": "sme",
+    "name": "Meteor Development Group",
+    "logo": "https://www.ecma-international.org/images/members/SME/Meteor Development Group logo.gif",
+    "href": "https://www.meteor.com"
+  },
+  {
+    "category": "spc",
+    "name": "Agoric Systems",
+    "logo": "https://www.ecma-international.org/images/members/SPC/Agoric Systems logo.gif",
+    "href": "https://agoric.com"
+  },
+  {
+    "category": "spc",
+    "name": "Bocoup",
+    "logo": "https://www.ecma-international.org/images/members/SPC/bocoup logo.gif",
+    "href": "https://bocoup.com"
+  },
+  {
+    "category": "spc",
+    "name": "GVE Ltd",
+    "logo": "https://www.ecma-international.org/images/members/SPC/gve_logo.gif",
+    "href": "https://gve.co.jp"
+  },
+  {
+    "category": "spc",
+    "name": "MetaMask",
+    "logo": "https://www.ecma-international.org/images/members/SPC/MetaMask logo.gif",
+    "href": "https://metamask.io"
+  },
+  {
+    "category": "spc",
+    "name": "Moddable Tech, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/SPC/Moddable Tech logo.gif",
+    "href": "https://www.moddable.tech"
+  },
+  {
+    "category": "spc",
+    "name": "SATT AI Lab, Inc.",
+    "logo": "https://www.ecma-international.org/images/members/SPC/SATT AI Lab logo.gif",
+    "href": "https://satt.ai"
+  },
+  {
+    "category": "spc",
+    "name": "Sujitech, LLC",
+    "logo": "https://www.ecma-international.org/images/members/SPC/Sujitech logo.gif",
+    "href": "https://sujitech.com"
+  },
+  {
+    "category": "spc",
+    "name": "Tilde Inc.",
+    "logo": "https://www.ecma-international.org/images/members/SPC/Tilde Inc. logo.gif",
+    "href": "https://www.tilde.io"
+  },
+  {
+    "category": "nfp",
+    "name": "Archive Disc Test Center",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Archive Disk Test Center logo.gif",
+    "href": "https://www.n-adtc.org"
+  },
+  {
+    "category": "nfp",
+    "name": "BAM",
+    "logo": "https://www.ecma-international.org/images/members/NFP/BAM logo.gif",
+    "href": "https://www.bam.de"
+  },
+  {
+    "category": "nfp",
+    "name": "Ben-Gurion University of the Negev",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Ben Gurion University of the Negev logo.gif",
+    "href": "https://in.bgu.ac.il/en/Pages/default.aspx"
+  },
+  {
+    "category": "nfp",
+    "name": "Datlas",
+    "logo": "https://www.ecma-international.org/images/members/NFP/datlas_logo.gif",
+    "href": "https://www.datlas.org"
+  },
+  {
+    "category": "nfp",
+    "name": "Dr. G.R. Damodaran College of Science",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Dr. G.R. Damodaran College of Science logo.gif",
+    "href": "https://www.grd.org/grdcs/"
+  },
+  {
+    "category": "nfp",
+    "name": "EPFL",
+    "logo": "https://www.ecma-international.org/images/members/NFP/EPFL logo.gif",
+    "href": "https://www.epfl.ch"
+  },
+  {
+    "category": "nfp",
+    "name": "ETH Zurich",
+    "logo": "https://www.ecma-international.org/images/members/NFP/ETH.gif",
+    "href": "https://www.ethz.ch"
+  },
+  {
+    "category": "nfp",
+    "name": "ETRI",
+    "logo": "https://www.ecma-international.org/images/members/NFP/ETRI_logo.gif",
+    "href": "https://www.etri.re.kr"
+  },
+  {
+    "category": "nfp",
+    "name": "Hosei University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Hosei University logo.gif",
+    "href": "https://www.hosei.ac.jp/english/"
+  },
+  {
+    "category": "nfp",
+    "name": "Humanitarian Toolbox",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Humanitarian Toolbox logo.gif",
+    "href": "http://www.htbox.org"
+  },
+  {
+    "category": "nfp",
+    "name": "IMEC",
+    "logo": "https://www.ecma-international.org/images/members/NFP/IMEC%20logo.gif",
+    "href": "https://www.imec-int.com/en"
+  },
+  {
+    "category": "nfp",
+    "name": "Imperial College London",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Imperial College London logo.gif",
+    "href": "https://www3.imperial.ac.uk"
+  },
+  {
+    "category": "nfp",
+    "name": "Indiana University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Indiana University logo.gif",
+    "href": "https://www.indiana.edu"
+  },
+  {
+    "category": "nfp",
+    "name": "Indian Institute of Technology Delhi",
+    "logo": "https://www.ecma-international.org/images/members/NFP/IITD.gif",
+    "href": "https://www.iitd.ac.in"
+  },
+  {
+    "category": "nfp",
+    "name": "Inria",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Inria logo.gif",
+    "href": "https://www.inria.fr"
+  },
+  {
+    "category": "nfp",
+    "name": "Institute of Computing Technology, Chinese Academy of Sciences",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Institute of computing technology logo.gif",
+    "href": "http://www.ict.ac.cn"
+  },
+  {
+    "category": "nfp",
+    "name": "IT University of Copenhagen",
+    "logo": "https://www.ecma-international.org/images/members/NFP/IT University of Copenhagen logo.gif",
+    "href": "https://www.itu.dk"
+  },
+  {
+    "category": "nfp",
+    "name": "Japan Broadcasting Corporation",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Japan Broadcasting Corporation logo.gif",
+    "href": "https://www.nhk.or.jp/corporateinfo/"
+  },
+  {
+    "category": "nfp",
+    "name": "JBMIA",
+    "logo": "https://www.ecma-international.org/images/members/NFP/JBMIA logo.gif",
+    "href": "https://www.jbmia.or.jp"
+  },
+  {
+    "category": "nfp",
+    "name": "Kahu Research",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Kahu%20Research%20logo.gif",
+    "href": "https://kahu.zoot.net.nz"
+  },
+  {
+    "category": "nfp",
+    "name": "Keio University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Keio University logo.gif",
+    "href": "https://www.keio.ac.jp/en/"
+  },
+  {
+    "category": "nfp",
+    "name": "Korea University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Korea University logo.gif",
+    "href": "http://www.korea.edu"
+  },
+  {
+    "category": "nfp",
+    "name": "LBNL",
+    "logo": "https://www.ecma-international.org/images/members/NFP/LBNL logo.gif",
+    "href": "https://www.lbl.gov"
+  },
+  {
+    "category": "nfp",
+    "name": "Leiden University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/leiden_university_logo.gif",
+    "href": "https://www.universiteitleiden.nl"
+  },
+  {
+    "category": "nfp",
+    "name": "Michigan State University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/michigan_state_university_logo.gif",
+    "href": "https://msu.edu"
+  },
+  {
+    "category": "nfp",
+    "name": "Mozilla",
+    "logo": "https://www.ecma-international.org/images/members/NFP/mozilla.gif",
+    "href": "https://www.mozilla.org"
+  },
+  {
+    "category": "nfp",
+    "name": "OITDA",
+    "logo": "https://www.ecma-international.org/images/members/NFP/OITDA logo.gif",
+    "href": "http://www.oitda.or.jp"
+  },
+  {
+    "category": "nfp",
+    "name": "OpenJS Foundation",
+    "logo": "https://www.ecma-international.org/images/members/NFP/OpenJS Foundation logo.gif",
+    "href": "https://openjsf.org"
+  },
+  {
+    "category": "nfp",
+    "name": "Osaka Prefecture University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Osaka Prefecture University logo.gif",
+    "href": "https://www.osakafu-u.ac.jp/en/"
+  },
+  {
+    "category": "nfp",
+    "name": "Osaka Sangyo University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Osaka Sangyo University logo.gif",
+    "href": "https://www.osaka-sandai.ac.jp"
+  },
+  {
+    "category": "nfp",
+    "name": "Purdue University",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Purdue University logo.gif",
+    "href": "https://www.purdue.edu"
+  },
+  {
+    "category": "nfp",
+    "name": "Small Fan Workshop Association",
+    "logo": "https://www.ecma-international.org/images/members/NFP/general incorporated association small fan workshop logo.gif",
+    "href": "https://www.smallfan.org"
+  },
+  {
+    "category": "nfp",
+    "name": "The Library of Congress",
+    "logo": "https://www.ecma-international.org/images/members/NFP/LOC_logo.gif",
+    "href": "https://www.loc.gov/index.html"
+  },
+  {
+    "category": "nfp",
+    "name": "The University of Electro-Communications",
+    "logo": "https://www.ecma-international.org/images/members/NFP/UEC logo.gif",
+    "href": "https://www.uec.ac.jp/eng/"
+  },
+  {
+    "category": "nfp",
+    "name": "Turing School of Software & Design",
+    "logo": "https://www.ecma-international.org/images/members/NFP/Turing school of software & design logo.gif",
+    "href": "https://www.turing.io"
+  },
+  {
+    "category": "nfp",
+    "name": "University of California Santa Cruz",
+    "logo": "https://www.ecma-international.org/images/members/NFP/UC Santa Cruz logo.gif",
+    "href": "https://www.ucsc.edu/public/"
+  },
+  {
+    "category": "nfp",
+    "name": "University of South Florida",
+    "logo": "https://www.ecma-international.org/images/members/NFP/University of South Florida logo.gif",
+    "href": "https://www.usf.edu"
+  },
+  {
+    "category": "nfp",
+    "name": "University of Technology Sydney (previously RMIT  University)",
+    "logo": "https://www.ecma-international.org/images/members/NFP/UTS logo.gif",
+    "href": "https://www.uts.edu.au"
+  },
+  {
+    "category": "nfp",
+    "name": "University of Victoria",
+    "logo": "https://www.ecma-international.org/images/members/NFP/University of Victoria logo.gif",
+    "href": "https://www.uvic.ca"
+  },
+  {
+    "category": "nfp",
+    "name": "VCCI Council",
+    "logo": "https://www.ecma-international.org/images/members/NFP/VCCI.gif",
+    "href": "https://www.vcci.jp"
+  }
+]
